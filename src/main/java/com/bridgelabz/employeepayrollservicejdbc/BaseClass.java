@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.Enumeration;
 
 public class BaseClass {
@@ -20,6 +21,10 @@ public class BaseClass {
 		employeePayroll.insertEmployeePayrollData();
 		employeePayroll.updateEmployeePayrollData();
 		employeePayroll.updateWithPreparedStementEmployeePayrollData();
+		 LocalDate startDate = LocalDate.of(2022, 1, 1);
+	        LocalDate endDate = LocalDate.of(2022, 12, 31);
+	        EmployeePayroll.getEmployeesByJoiningDateRange(startDate, endDate);
+	
 		
 	
 	}

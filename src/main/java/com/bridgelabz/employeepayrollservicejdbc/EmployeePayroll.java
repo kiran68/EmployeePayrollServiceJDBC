@@ -1,9 +1,11 @@
 package com.bridgelabz.employeepayrollservicejdbc;
 
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
 
 public class EmployeePayroll extends BaseClass {
 
@@ -61,4 +63,22 @@ public class EmployeePayroll extends BaseClass {
 		preparedStatement.executeUpdate();
 		System.out.println("Record updated successfully");
 }
-}
+	public static void getEmployeesByJoiningDateRange(LocalDate startDate, LocalDate endDate) throws SQLException {
+	    connection = setUpDatabase();
+	    String query = "SELECT * FROM employee_payroll WHERE start BETWEEN ? AND ?";
+	    PreparedStatement preparedStatement = connection.prepareStatement(query);
+	    preparedStatement.setDate(1, Date.valueOf(startDate));
+	    preparedStatement.setDate(2, Date.valueOf(endDate));
+	    ResultSet resultSet = preparedStatement.executeQuery();
+	    while (resultSet.next()) {
+	        int id = resultSet.getInt(1);
+	     
+	        LocalDate start = resultSet.getDate(8).toLocalDate();
+	        System.out.println( start);
+	    }
+	       
+	    }
+	
+	}
+
+
