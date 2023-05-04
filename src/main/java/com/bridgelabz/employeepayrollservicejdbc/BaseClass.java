@@ -19,6 +19,7 @@ public class BaseClass {
 		employeePayroll.retrieveEmployeePayrollData();
 		employeePayroll.insertEmployeePayrollData();
 		employeePayroll.updateEmployeePayrollData();
+		employeePayroll.updateWithPreparedStementEmployeePayrollData();
 		
 	
 	}
