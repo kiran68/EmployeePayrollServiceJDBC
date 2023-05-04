@@ -24,8 +24,7 @@ public class BaseClass {
 		 LocalDate startDate = LocalDate.of(2022, 1, 1);
 	        LocalDate endDate = LocalDate.of(2022, 12, 31);
 	        EmployeePayroll.getEmployeesByJoiningDateRange(startDate, endDate);
-	
-		
+	        employeePayroll.analyzeEmployeePayrollByGender();	
 	
 	}
 
