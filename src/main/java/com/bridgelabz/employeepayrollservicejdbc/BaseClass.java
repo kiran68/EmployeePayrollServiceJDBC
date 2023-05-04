@@ -17,6 +17,9 @@ public class BaseClass {
 		EmployeePayroll employeePayroll = new EmployeePayroll();
 
 		employeePayroll.retrieveEmployeePayrollData();
+		employeePayroll.insertEmployeePayrollData();
+		employeePayroll.updateEmployeePayrollData();
+		
 	
 	}
 
